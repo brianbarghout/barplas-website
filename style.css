@@ -101,6 +101,31 @@ ul { list-style: none; }
 
 .nav-cta:hover { background: #256840; }
 
+/* Hamburger toggle — hidden on desktop, shown below 900px */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--white);
+  margin: 0 auto;
+  transition: transform 0.25s, opacity 0.25s;
+}
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* ============================================
    HERO
    ============================================ */
@@ -470,7 +495,28 @@ h2 {
   .intro-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-inner { grid-template-columns: 1fr; gap: 32px; }
   .hero-content { padding-left: 32px; }
-  .nav-links { display: none; }
+
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(15, 26, 36, 0.98);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 8px 0;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { list-style: none; }
+  .nav-links a {
+    display: block;
+    padding: 14px 40px;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 600px) {
