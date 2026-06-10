@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products & Capabilities — Barplas Lebanon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: #e0ddd8;
+    }
+    .product-card {
+      background: var(--white);
+      padding: 40px 32px;
+    }
+    .product-card h3 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 12px;
+      letter-spacing: 0.03em;
+    }
+    .product-card p {
+      font-size: 0.9rem;
+      color: var(--grey);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .product-sizes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .size-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--navy);
+      background: var(--stone);
+      padding: 4px 10px;
+      border-radius: 2px;
+      letter-spacing: 0.04em;
+    }
+    .capability-row {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 32px;
+      align-items: start;
+      padding: 48px 0;
+      border-bottom: 1px solid #E5E0D8;
+    }
+    .capability-row:last-child { border-bottom: none; }
+    .cap-number {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 3rem;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .cap-content h3 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .cap-content p {
+      font-size: 0.95rem;
+      color: #4A5568;
+      line-height: 1.75;
+      max-width: 600px;
+    }
+    .photo-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 480px;
+      gap: 2px;
+    }
+    .photo-strip-item { overflow: hidden; }
+    .photo-strip-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .photo-strip-item:hover img { transform: scale(1.03); }
+    @media (max-width: 900px) {
+      .products-grid { grid-template-columns: 1fr; }
+      .photo-strip { grid-template-columns: 1fr; height: auto; }
+      .photo-strip-item { height: 280px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">BARPLAS</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Get in Touch</a>
+  </nav>
+
+  <div class="page-header">
+    <h1>Products &amp; Capabilities</h1>
+    <p>Injection-moulded plastic containers with world-class decoration — everything manufactured in-house in the Bekaa Valley.</p>
+  </div>
+
+  <!-- PRODUCT PHOTO STRIP -->
+  <div class="photo-strip">
+    <div class="photo-strip-item">
+      <img src="arazello-pail.png" alt="Arazello branded pail — IML printing by Barplas Lebanon">
+    </div>
+    <div class="photo-strip-item">
+      <img src="pablo-pail.png" alt="Pablo Wood Glue pail — dry offset printing by Barplas Lebanon">
+    </div>
+  </div>
+
+  <!-- PRODUCT RANGE -->
+  <section class="section-light">
+    <div class="container">
+      <p class="eyebrow">Product Range</p>
+      <h2>What We Manufacture</h2>
+      <div class="products-grid" style="margin-top: 40px;">
+
+        <div class="product-card">
+          <h3>Pails &amp; Buckets</h3>
+          <p>Round injection-moulded pails for paint, chemicals, adhesives, construction products and food. Available in straight-wall and conical profiles.</p>
+          <div class="product-sizes">
+            <span class="size-tag">1L</span>
+            <span class="size-tag">3.785L</span>
+            <span class="size-tag">14L</span>
+            <span class="size-tag">16L</span>
+            <span class="size-tag">17L</span>
+            <span class="size-tag">19L</span>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3>Food &amp; Date Packaging</h3>
+          <p>Rectangular plates for dates and similar food products. Hygienic, robust, and available with high-quality printed decoration.</p>
+          <div class="product-sizes">
+            <span class="size-tag">0.5kg</span>
+            <span class="size-tag">1kg</span>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <h3>Cosmetic Jars</h3>
+          <p>Small jars for cosmetics, personal care and beauty products. Clean moulding, tight tolerances, suitable for retail display.</p>
+          <div class="product-sizes">
+            <span class="size-tag">100ml</span>
+            <span class="size-tag">250ml</span>
+            <span class="size-tag">500ml</span>
+            <span class="size-tag">1000ml</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES -->
+  <section class="section-light" style="background: var(--white);">
+    <div class="container">
+      <p class="eyebrow">Decoration Technologies</p>
+      <h2>Three Ways to Make<br>Your Container Stand Out</h2>
+
+      <div style="margin-top: 40px;">
+        <div class="capability-row">
+          <div class="cap-number">01</div>
+          <div class="cap-content">
+            <h3>IML — In-Mould Labelling</h3>
+            <p>The label is placed inside the mould before injection, becoming a permanent, seamless part of the container wall. The result is photographic-quality decoration that cannot peel, fade or scratch — ideal for premium brands and shelf-ready packaging.</p>
+          </div>
+        </div>
+        <div class="capability-row">
+          <div class="cap-number">02</div>
+          <div class="cap-content">
+            <h3>Dry Offset Printing</h3>
+            <p>Using Desco equipment — the world standard for pail and bucket decoration — we print directly onto the finished container in up to six colours in a single pass, including full-process and half-tone artwork. Fast, consistent, and highly cost-effective for volume runs.</p>
+          </div>
+        </div>
+        <div class="capability-row">
+          <div class="cap-number">03</div>
+          <div class="cap-content">
+            <h3>Heat Transfer Printing</h3>
+            <p>High-definition decoration applied to finished containers, offering maximum design flexibility and rich colour reproduction. Well-suited to complex artwork, gradients and detailed brand graphics.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LUXUR WALL FULL BLEED -->
+  <section class="full-bleed" style="background-image: url('luxur-wall.png'); background-attachment: scroll;">
+    <div class="full-bleed-overlay" style="background: rgba(10,20,30,0.55);"></div>
+    <div class="full-bleed-content container">
+      <p class="eyebrow eyebrow-light">Production Capacity</p>
+      <h2 class="headline-light">Volume you can rely on.</h2>
+      <p class="subline-light">From short runs to high-volume supply — we manufacture to your schedule. Talk to us about your requirements.</p>
+      <a href="contact.html" class="btn-primary">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">BARPLAS</span>
+        <p>Barplas (Lebanon) S.A.L.<br>Mandara Industrial Area, Kob Elias<br>Bekaa Valley, Lebanon</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <p>+961 5 601 947</p>
+        <p>+961 3 887 869</p>
+        <p><a href="mailto:info@barplas.com">info@barplas.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Barplas (Lebanon) S.A.L. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
