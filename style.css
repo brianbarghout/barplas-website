@@ -59,6 +59,17 @@ ul { list-style: none; }
   color: var(--white);
 }
 
+.nav-tagline {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  display: block;
+  margin-top: 2px;
+}
+
 .nav-links {
   display: flex;
   gap: 36px;
