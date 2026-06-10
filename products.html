@@ -81,16 +81,14 @@
     .photo-strip {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      height: 480px;
       gap: 2px;
     }
-    .photo-strip-item { overflow: hidden; }
+    .photo-strip-item { overflow: hidden; aspect-ratio: 8 / 9; }
     .photo-strip-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
     .photo-strip-item:hover img { transform: scale(1.03); }
     @media (max-width: 900px) {
       .products-grid { grid-template-columns: 1fr; }
-      .photo-strip { grid-template-columns: 1fr; height: auto; }
-      .photo-strip-item { height: 280px; }
+      .photo-strip { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -117,10 +115,10 @@
   <!-- PRODUCT PHOTO STRIP -->
   <div class="photo-strip">
     <div class="photo-strip-item">
-      <img src="arazello-pail.png" alt="Arazello branded pail — IML printing by Barplas Lebanon">
+      <img src="arazello-pail.png?v=10" alt="Arazello branded pail — IML printing by Barplas Lebanon">
     </div>
     <div class="photo-strip-item">
-      <img src="pablo-pail.png" alt="Pablo Wood Glue pail — dry offset printing by Barplas Lebanon">
+      <img src="pablo-pail.png?v=10" alt="Pablo Wood Glue pail — dry offset printing by Barplas Lebanon">
     </div>
   </div>
 
